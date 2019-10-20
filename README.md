@@ -28,7 +28,7 @@ Add the following line to your Podfile:
 ###### ios/Podfile
 ```
 pod 'ZendeskSDK', '~> 1.7.6.1'
-pod 'rn-support', :path => '../node_modules/rn-zendesk-support'
+pod 'rn-zendesk-support', :path => '../node_modules/rn-zendesk-support'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
