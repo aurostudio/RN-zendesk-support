@@ -105,7 +105,7 @@ Personally, I use the CocoaPods implementation described in their documentation.
 
 #### Import the module
 ```js
-import ZendeskSupport from 'react-native-zendesk-support';
+import ZendeskSupport from 'RN-zendesk-support';
 ```
 
 #### Initialize Zendesk
