@@ -1,0 +1,21 @@
+{
+  "name": "react-native-zendesk-support",
+  "version": "1.1.0",
+  "description": "React Native Wrapper around Zendesk Support",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aurostudio/RN-zendesk-support"
+  },
+  "keywords": [
+    "zendesk",
+    "support",
+    "react-native",
+    "react",
+    "ios",
+    "android",
+    "react-component"
+  ],
+  "author": "Auro Studio",
+  "license": "MIT"
+}
