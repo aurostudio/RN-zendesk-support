@@ -18,7 +18,7 @@ This supports ZendeskSDK 1.7.6.1
 
 ### Installing via RNPM (Common)
 ```
-react-native link react-native-zendesk-support
+react-native link rn-zendesk-support
 ```
 
 ### Installing via Cocoapods (Not Common)
@@ -28,7 +28,7 @@ Add the following line to your Podfile:
 ###### ios/Podfile
 ```
 pod 'ZendeskSDK', '~> 1.7.6.1'
-pod 'react-native-zendesk-support', :path => '../node_modules/react-native-zendesk-support'
+pod 'react-zendesk-support', :path => '../node_modules/rn-zendesk-support'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
@@ -43,7 +43,7 @@ end
 
 If using `react-native link` doesn't work, you can try manually linking. Sometimes apps created with `create-react-native-app` that haven't been ejected can have problems linking properly.
 
-1. Open your project in XCode, right click on `Libraries` and click `Add Files to "Your Project Name"`. Look under node_modules/react-native-zendesk-support` and add `RNZenDeskSupport.xcodeproj`
+1. Open your project in XCode, right click on `Libraries` and click `Add Files to "Your Project Name"`. Look under `node_modules/rn-zendesk-support` and add `RNZenDeskSupport.xcodeproj`
 2. Add `libRNZenDeskSupport.a` from `Libraries/RNZenDeskSupport.xcodeproj/Products` to `Build Phases -> Link Binary With Libraries`
 3. Verify `$(SRCROOT)/../../react-native/React` is included in `Header Search Paths` under `Build Settings` for the `Libraries/RNZenDeskSupport.xcodeproj` library you just added. Mark it as `recursive`
 
@@ -55,7 +55,7 @@ If using `react-native link` doesn't work, you can try manually linking. Sometim
 dependencies {
     ...
     compile "com.facebook.react:react-native:+"  // From node_modules
-+   compile project(':react-native-zendesk-support')
++   compile project(':rn-zendesk-support')
 }
 ```
 
@@ -63,8 +63,8 @@ dependencies {
 ```diff
 ...
 include ':app'
-+ include ':react-native-zendesk-support'
-+ project(':react-native-zendesk-support').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-zendesk-support/android')
++ include ':rn-zendesk-support'
++ project(':rn-zendesk-support').projectDir = new File(rootProject.projectDir, '../node_modules/rn-zendesk-support/android')
 ```
 
 ### Configure Android (Must Do)
