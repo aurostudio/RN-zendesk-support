@@ -54,19 +54,19 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-    public void setupIdentity(ReadableMap identity) {
-      AnonymousIdentity.Builder builder = new AnonymousIdentity.Builder();
+  public void setupIdentity(ReadableMap identity) {
+    AnonymousIdentity.Builder builder = new AnonymousIdentity.Builder();
 
-      if (identity != null && identity.hasKey("customerEmail")) {
-        builder.withEmailIdentifier(identity.getString("customerEmail"));
-      }
-
-      if (identity != null && identity.hasKey("customerName")) {
-        builder.withNameIdentifier(identity.getString("customerName"));
-      }
-
-      ZendeskConfig.INSTANCE.setIdentity(builder.build());
+    if (identity != null && identity.hasKey("customerEmail")) {
+      builder.withEmailIdentifier(identity.getString("customerEmail"));
     }
+
+    if (identity != null && identity.hasKey("customerName")) {
+      builder.withNameIdentifier(identity.getString("customerName"));
+    }
+
+    ZendeskConfig.INSTANCE.setIdentity(builder.build());
+  }
 
   @ReactMethod
   public void showHelpCenterWithOptions(ReadableMap options) {
@@ -97,6 +97,11 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
       .withOptions(options)
       .withLabelNames(labels)
       .show(getReactApplicationContext());
+  }
+
+  @ReactMethod
+  public void setLocale(String locale) {
+    ZendeskConfig.INSTANCE.setDeviceLocale(locale);
   }
 
   @ReactMethod
