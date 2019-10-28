@@ -101,7 +101,17 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setLocale(String locale) {
-    ZendeskConfig.INSTANCE.setDeviceLocale(locale);
+      Locale currentLocale;
+
+      switch (locale) {
+        case "fr":
+            currentLocale = Locale.FRENCH;
+            break;
+        default:
+            currentLocale = Locale.US;
+            break;
+      }
+      ZendeskConfig.INSTANCE.setDeviceLocale(currentLocale);
   }
 
   @ReactMethod
