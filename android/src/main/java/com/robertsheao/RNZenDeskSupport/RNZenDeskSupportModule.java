@@ -27,6 +27,7 @@ import com.zendesk.sdk.network.impl.ZendeskConfig;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Locale;
 
 public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
   public RNZenDeskSupportModule(ReactApplicationContext reactContext) {
